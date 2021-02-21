@@ -28,7 +28,6 @@ namespace blazorwasm_calls_MS_graph.Data
                 foreach (var scope in scopes)
                 {
                     options.ProviderOptions.AdditionalScopesToConsent.Add(scope);
-
                 }
             });
 
