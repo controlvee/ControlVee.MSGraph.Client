@@ -11,6 +11,7 @@ namespace blazorwasm_calls_MS_graph
 {
     /// <summary>
     /// HOWTO: https://github.com/controlvee/ControlVee.MSGraph.Client/blob/master/README.md#how-to-run-this-sample
+    /// OAUTHPlay: https://oauthplay.azurewebsites.net
     /// </summary>
     public class Program
     {
@@ -27,6 +28,7 @@ namespace blazorwasm_calls_MS_graph
             {
                 builder.Configuration.Bind("AzureAd", options.ProviderOptions.Authentication);
                 options.ProviderOptions.DefaultAccessTokenScopes.Add("https://graph.microsoft.com/User.Read");
+                options.ProviderOptions.DefaultAccessTokenScopes.Add("https://graph.microsoft.com/Mail.Read");
             });
             await builder.Build().RunAsync();
         }

@@ -21,7 +21,7 @@ namespace blazorwasm_calls_MS_graph.Pages
         protected IEnumerable<Claim> _claims = Enumerable.Empty<Claim>();
 
         // Defines list of claim types that will be displayed after successfull sign-in.
-        private string[] returnClaims = { "name", "preferred_username", "tid", "oid" };
+        private string[] returnClaims = { "name", "preferred_username", "tid", "oid", "email" };
 
         protected override async Task OnInitializedAsync()
         {

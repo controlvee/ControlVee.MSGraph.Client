@@ -1,0 +1,37 @@
+﻿@page "/email"
+
+@inherits UserEmailBase
+@attribute [Microsoft.AspNetCore.Authorization.Authorize]
+<AuthorizeView>
+    <Authorized>
+        <h4>
+            @context.User.Identity.Name has successfully signed-in
+        </h4>
+        Claims from the ID token
+        @if (_messages.Count() > 0)
+        {
+<table class="table">
+    <thead>
+        <tr>
+            <th>Claim Type</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var messsage in _messages)
+        {
+<tr>
+    <td>@messsage.Subject</td>
+</tr>                    }
+    </tbody>
+</table> }
+                else
+                {
+<h3>_authMessage</h3>}
+    </Authorized>
+    <NotAuthorized>
+        Sign-in to see user details.
+    </NotAuthorized>
+</AuthorizeView>
+
+
