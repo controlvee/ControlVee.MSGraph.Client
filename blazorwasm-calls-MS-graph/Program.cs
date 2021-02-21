@@ -9,6 +9,9 @@ using Microsoft.Graph;
 
 namespace blazorwasm_calls_MS_graph
 {
+    /// <summary>
+    /// HOWTO: https://github.com/controlvee/ControlVee.MSGraph.Client/blob/master/README.md#how-to-run-this-sample
+    /// </summary>
     public class Program
     {
         public static async Task Main(string[] args)
