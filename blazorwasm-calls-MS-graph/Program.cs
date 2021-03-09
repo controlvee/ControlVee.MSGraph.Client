@@ -11,7 +11,6 @@ namespace blazorwasm_calls_MS_graph
 {
     /// <summary>
     /// HOWTO: https://github.com/controlvee/ControlVee.MSGraph.Client/blob/master/README.md#how-to-run-this-sample
-    /// OAUTHPlay: https://oauthplay.azurewebsites.net
     /// </summary>
     public class Program
     {
